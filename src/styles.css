@@ -1,0 +1,75 @@
+.content-container{
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width:100%;
+}
+
+.content-80{
+    width:80%;
+    float:left;
+}
+
+.content-20{
+    width:20%;
+    float:left;
+}
+
+.button{
+    background-color: #0179D8;
+    color: white;
+    margin:10px;
+    align-content: center;
+    text-align: center;
+}
+
+.searchbtn{
+    right:0;
+    left:0;
+    float:right;
+}
+
+.browsebtn{
+    margin-right:4px;
+    float:left;
+}
+
+.searchbar{
+    overflow: hidden;
+    padding-right: 1em;
+}
+
+.github-widget{
+    width:100%;
+    max-width: 100% !important;
+}
+
+.gh-widget-container{
+    align-items: left !important;
+    justify-content: left !important;
+    padding: 10;
+}
+
+.gh-widget-topic{
+    align-items: left;
+}
+
+
+.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
+
+#model-wrapper{
+    height:400px;
+}
+
+.item{
+    height:350px;
+}
