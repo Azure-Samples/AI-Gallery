@@ -1,0 +1,70 @@
+body {
+	margin: 3em;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.menu-wrapper {
+    position: relative;
+	overflow-x: none;
+    overflow-y: none;
+}
+
+.menu	{
+	white-space: nowrap;
+	overflow-x: hidden;
+	overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item {
+    width:250px;
+    margin:10px;
+    display: inline-block;
+}
+
+.examplesitem {
+    width:250px;
+    margin:10px;
+    display: inline-block;
+}
+
+.modelsitem {
+    width:250px;
+    margin:10px;
+    display: inline-block;
+}
+
+.buffer {
+    width:15px;
+    display: inline-block;
+}
+
+.paddle {
+    color: #666;
+    opacity: .8;
+    border:0;
+	position: absolute;
+	top: 35%;
+    bottom: 45%;
+    width: 2em;
+    margin:20;
+}
+
+.left-paddle {
+	left: 0;
+}
+.right-paddle {
+	right: 0;
+}
+.hidden {
+	display: none;
+}
+
+.print {
+	margin: auto;
+	max-width: 500px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "AzureAIGallery",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/jpe316/AzureAIGallery/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpe316/AzureAIGallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpe316/AzureAIGallery/issues"
+  },
+  "homepage": "https://github.com/jpe316/AzureAIGallery#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "@types/jquery": "^3.3.14",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4"
+  }
+}

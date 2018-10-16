@@ -1,57 +1,33 @@
-# Project Name
+## GitHub Pages AI Gallery Example
 
-(short, 1-3 sentenced, description of the project)
+You can use the [editor on GitHub](https://github.com/jpe316/AzureAIGallery/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-## Features
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-This project framework provides the following features:
+### Markdown
 
-* Feature 1
-* Feature 2
-* ...
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-## Getting Started
+```markdown
+Syntax highlighted code block
 
-### Prerequisites
+# Header 1
+## Header 2
+### Header 3
 
-(ideally very short, if any)
+- Bulleted
+- List
 
-- OS
-- Library version
-- ...
+1. Numbered
+2. List
 
-### Installation
+**Bold** and _Italic_ and `Code` text
 
-(ideally very short)
+[Link](url) and ![Image](src)
+```
 
-- npm install [package name]
-- mvn install
-- ...
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Quickstart
-(Add steps to get up and running quickly)
+### Support or Contact
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
