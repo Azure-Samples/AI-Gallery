@@ -47,6 +47,7 @@ module.exports = {
     //     "react-dom": "ReactDOM"
     // }
     externals: {
-        jquery: 'jQuery'
+        jquery: 'jQuery',
+        githubCard: '//cdn.jsdelivr.net/github-cards/latest/widget.js'
     }
 };
