@@ -42,3 +42,8 @@ In order to test the site, simply run `npm test` to leverage the Jest testing fr
 
 ### Packaging all Modules
 
+Package and build all modules by running `npm run build` to build the production packages, or `npm run develop` to build and watch for development purposes. These commands are proxies defined in package.json.
+
+# Editing Models/Examples
+
+Models and examples can be edited by editing the JSON contained in the config.js file.
