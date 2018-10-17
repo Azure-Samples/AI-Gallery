@@ -109,8 +109,6 @@ var cardWidget = (function(d) {
     }
   
     var cards = queryclass('github-card');
-    console.log(cards);
-    console.log(cards.length);
     for (i = 0; i < cards.length; i++) {
       render(cards[i]);
     }
