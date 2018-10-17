@@ -19,16 +19,12 @@ var content = {
 
     getContent:(keywords) => {
         $(document).ready(function() {
-            console.log(keywords);
-            console.log(keywords.length);
             for(var k = 0; k < keywords.length; k++)
             {
-                console.log(keywords[k]);
                 var elementid = keywords[k] + '-menu';
                 var cards = content.prepareContent(keywords[k]);
                 for(var i = 0; i < cards.length; i++){
                     document.getElementById(elementid).appendChild(cards[i]);
-                    console.log(cards[i].innerHTML);
                 }
             }
             var cardWidget = require('./card-widget');
