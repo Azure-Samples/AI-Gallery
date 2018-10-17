@@ -2,7 +2,6 @@ var card = require('./card');
 
 var cardWidget = (function(d) {
     var base = "//lab.lepture.com/github-cards/";
-    console.log("running card widget!");
   
     var i, count = 0;
   
