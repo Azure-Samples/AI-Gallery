@@ -18,7 +18,7 @@
 .button{
     background-color: #0179D8;
     color: white;
-    width: 300px;
+    margin:10px;
     align-content: center;
     text-align: center;
 }
@@ -42,7 +42,6 @@
 .github-widget{
     width:100%;
     max-width: 100% !important;
-    
 }
 
 .gh-widget-container{
@@ -72,9 +71,5 @@
 }
 
 .item{
-    height:350px;
-}
-
-.github-card{
     height:350px;
 }
