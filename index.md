@@ -1,7 +1,5 @@
 ---
 layout: splash
-classes: landing
-
 ---
 
 <link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>

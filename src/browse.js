@@ -1,11 +1,16 @@
 var $ = require("jquery");
 
 var browse = {
+    init: () => {
+    /* TODO: 
     init: (buttons, fn) => {
         for(var i = 0; i < buttons.length; i ++)
         {
             console.log(buttons[i]) 
-        }
+            document.getElementById(buttons[i].id).addEventListener("click", function () {
+                fn()
+            })
+        }*/
         $(document).ready(function() {
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
