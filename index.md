@@ -1,23 +1,17 @@
----
-layout: splash
 classes: landing
 
 ---
 
 <link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>
 <link rel="stylesheet" type="text/css" href="./src/styles.css"/>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="./src/config.js"></script>
-<script type="text/javascript" src="./src/populate-content.js"></script>
+<script src="./dist/bundle.js"></script>
 
 # Azure AI Gallery
 
 ## Experimental
 
 ### The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
-<br/>
 
 1. ML models
 2. ML experiments
@@ -25,9 +19,10 @@ classes: landing
 
 <br/>
 <br/>
-* * *
-# Featured
 
+* * *
+
+# Featured
 
 ## Models
 
@@ -81,11 +76,4 @@ classes: landing
     </div>
 </div>
 
-<script>
-    fetchContent("models");
-    fetchContent("examples");
-</script>
 <script type="text/javascript" src="./src/content-scroller.js"></script>
-<script src="./dist/bundle.js"></script>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-<script type="text/javascript" src="./src/browse.js"></script>
