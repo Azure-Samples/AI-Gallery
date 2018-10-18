@@ -4,4 +4,7 @@ var browse = require('./browse');
 
 content.getContent(['models', 'examples']);
 widget.init();
-browse.init();
+
+$(document).ready(function (){
+    browse.init(document.getElementsByClassName('browsebtn'), function(){browse.restart(keyword)});
+})

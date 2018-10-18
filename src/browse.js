@@ -1,5 +1,11 @@
+var $ = require("jquery");
+
 var browse = {
-    init: () => {
+    init: (buttons, fn) => {
+        for(var i = 0; i < buttons.length; i ++)
+        {
+            console.log(buttons[i]) 
+        }
         $(document).ready(function() {
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
