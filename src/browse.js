@@ -1,12 +1,9 @@
 var $ = require("jquery");
 
 var browse = {
-    init: (buttons, fn) => {
-        for(var i = 0; i < buttons.length; i ++)
-        {
-            console.log(buttons[i]) 
-        }
+    init:() => {
         $(document).ready(function() {
+            console.log('initializing browse');
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
             });
@@ -17,6 +14,7 @@ var browse = {
     },
 
     restart:(keyword) => {
+        console.log("restart: " + keyword);
         document.getElementById('browse_widget1').innerHTML = '';
         browse.start(keyword);
     },
@@ -44,7 +42,7 @@ var browse = {
     },
 
     fetchRepos:(keyword, widgetId) => {
-        var url = "https://api.github.com/search/repositories?q=topic:" + keyword + "&sort=stars&per_page=1000";
+        var url = "https://api.github.com/search/repositories?q=user:azure+user:microsoft+user:azure-samples+topic:" + keyword + "&sort=stars&per_page=1000";
         browse.getJSON(url, function (response) {
             browse.updateRepoDetails(browse.topRepos(response), widgetId);
             browse.updateLastPush(browse.lastPushedDay(response), widgetId);
