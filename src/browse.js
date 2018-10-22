@@ -22,9 +22,14 @@ var browse = {
     start:(keyword) => {
         var widgets = document.querySelectorAll('.github-widget');
         for (var i = 0; i < widgets.length; i++) {
+
             var parentNode = widgets[i];
             var type = parentNode.getAttribute("data-type");
             var widget_name = type + "_widget" + i;
+            if (keyword === null)
+            {
+                keyword = parentNode.dataset.browsetopic;
+            }
             // get input depending on the type
             if (type === "browse") {
                 browse.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>');
