@@ -1,4 +1,5 @@
 var $ = require("jquery");
+<<<<<<< HEAD
 const browse = require('./../src/browse');
 
 
@@ -64,3 +65,31 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
     expect(repos[0].stars).toBe(6);
     expect(repos[3].stars).toBe(3);
 })
+=======
+
+/*
+test('Test that browse buttons work on click', () => {
+    //Set up document body
+    document.body.innerHTML = +
+        '<div>' + 
+            '<button id="OnnxSearch">' +
+            '<button id="TensorFlow">' +
+            '<div class="github-widget" id="browse_widget1" data-type="browse" data-browseTopic="onnx">Some Content</div>' +
+        '</div>';
+        
+    const browse = require('./../src/browse');
+    browse.restart = jest.fn().mockImplementation(() => console.log("MOCKED"));
+    const init = browse.init();
+
+    $('#OnnxSearch').click();
+
+    expect(browse.restart).toBeCalledTimes(1);
+    expect($('#browse_widget1').text()).not.toEqual('Some Content');
+    console.log(document.body.innerHTML);
+    console.log($('#browse_widget1').text());
+
+});
+*/
+
+test()
+>>>>>>> jekrame/discoverability

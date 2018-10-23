@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ---
 layout: splash
+=======
+classes: landing
+
+>>>>>>> jekrame/discoverability
 ---
 
 <link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>
@@ -58,7 +63,11 @@ layout: splash
 
 <div class="content-container">
     <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
+<<<<<<< HEAD
     <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" max-width="100%"></div>
+=======
+    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" width="100%"></div>
+>>>>>>> jekrame/discoverability
 </div>
 
 <div class="github-widget" data-type="search"></div>
@@ -72,7 +81,7 @@ layout: splash
 
 <div id="browse_content">
     <div class="browse_result" style="display:inline-block; width:100%; vertical-align: top">
-        <div class="github-widget" id='browse_widget0' data-type="browse" data-browseTopic="onnx"></div>
+        <div class="github-widget" id='browse_widget1' data-type="browse" data-browseTopic="onnx"></div>
     </div>
 </div>
 

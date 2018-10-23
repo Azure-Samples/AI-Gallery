@@ -1,6 +1,10 @@
 theme: minimal-mistakes-jekyll
 title: Azure AI Gallery
 
+<<<<<<< HEAD
 include: [_includes, node_modules]
+=======
+include: [dist, src, _site, node_modules]
+>>>>>>> jekrame/discoverability
 exclude: [./testing]
 ignore: package.json
