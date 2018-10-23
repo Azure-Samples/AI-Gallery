@@ -4,7 +4,6 @@ const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
 var browse = {
     init:() => {
         $(document).ready(function() {
-            console.log('initializing browse');
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
             });
@@ -15,7 +14,6 @@ var browse = {
     },
 
     restart:(keyword) => {
-        console.log("restart: " + keyword);
         document.getElementById('browse_widget1').innerHTML = '';
         browse.start(keyword);
     },
