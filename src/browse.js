@@ -57,12 +57,14 @@ var browse = {
     },
 
     getJSON:(url, callback) => {
+        var result
         var request = new XMLHttpRequest();
         request.open('GET', url, true);
         request.setRequestHeader('Accept', 'application/vnd.github.mercy-preview+json');
         request.onload = function () {
             if (request.status === 200) {
                 var data = JSON.parse(request.responseText);
+                result = data.items;
                 callback(data.items);
             }
         };
