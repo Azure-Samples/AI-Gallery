@@ -2,13 +2,10 @@ const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
 
 
 var widget = {
-    accounts:[],
 
-    init:(accounts) => {
+    init:() => {
         $(document).ready(function() {
             document.getElementById('btnSearch').addEventListener("click", widget.restart);
-            widget.accounts = accounts;
-            console.log("init: " + widget.accounts);
             widget.start();
         })
     },

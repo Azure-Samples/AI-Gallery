@@ -5,6 +5,6 @@ var browse = require('./browse');
 content.getContent(['models', 'examples']);
 
 $(document).ready(function (){
-    widget.init(['azure-samples', 'azure', 'microsoft']);
+    widget.init();
     browse.init(document.getElementsByClassName('browsebtn'), function(){browse.restart(keyword)});
 })
