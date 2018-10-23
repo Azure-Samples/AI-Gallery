@@ -1,10 +1,5 @@
-<<<<<<< HEAD
----
-layout: splash
-=======
 classes: landing
 
->>>>>>> jekrame/discoverability
 ---
 
 <link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>
@@ -63,11 +58,7 @@ classes: landing
 
 <div class="content-container">
     <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
-<<<<<<< HEAD
-    <div  class="searchbar"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" max-width="100%"></div>
-=======
     <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" width="100%"></div>
->>>>>>> jekrame/discoverability
 </div>
 
 <div class="github-widget" data-type="search"></div>

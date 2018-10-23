@@ -66,9 +66,9 @@ var widget = {
 
     constructURL:(keyword, users) => {
         var url = "https://api.github.com/search/repositories?q=";
-        for(i in users)
+        for(var i in users)
         {
-            url = url + "user:" + users[i];
+            url = url + "user:" + users[i] + "+";
         }
         url = url + "topic:" + keyword + "&sort=stars&per_page=40";
 

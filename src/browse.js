@@ -1,23 +1,8 @@
 var $ = require("jquery");
-<<<<<<< HEAD
-
-var browse = {
-    init: () => {
-    /* TODO: 
-    init: (buttons, fn) => {
-        for(var i = 0; i < buttons.length; i ++)
-        {
-            console.log(buttons[i]) 
-            document.getElementById(buttons[i].id).addEventListener("click", function () {
-                fn()
-            })
-        }*/
-=======
 const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
 
 var browse = {
     init:() => {
->>>>>>> jekrame/discoverability
         $(document).ready(function() {
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
@@ -36,15 +21,6 @@ var browse = {
     start:(keyword) => {
         var widgets = document.querySelectorAll('.github-widget');
         for (var i = 0; i < widgets.length; i++) {
-<<<<<<< HEAD
-            var parentNode = widgets[i];
-            var type = parentNode.getAttribute("data-type");
-            var widget_name = type + "_widget" + i;
-            // get input depending on the type
-            if (type === "browse") {
-                browse.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>');
-                browse.fetchRepos(keyword, "#" + widget_name);
-=======
 
             var parentNode = widgets[i];
             var type = parentNode.getAttribute("data-type");
@@ -57,7 +33,6 @@ var browse = {
             if (type === "browse") {
                 browse.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>');
                 browse.fetchRepos(keyword, "#" + widget_name, orgs);
->>>>>>> jekrame/discoverability
             }
         }
     },
@@ -70,18 +45,11 @@ var browse = {
         parentNode.appendChild(childNode);
     },
 
-<<<<<<< HEAD
-    fetchRepos:(keyword, widgetId) => {
-        var url = "https://api.github.com/search/repositories?q=topic:" + keyword + "&sort=stars&per_page=1000";
-        browse.getJSON(url, function (response) {
-            browse.updateRepoDetails(browse.topRepos(response), widgetId);
-            browse.updateLastPush(browse.lastPushedDay(response), widgetId);
-=======
     constructURL:(keyword, users) => {
         var url = "https://api.github.com/search/repositories?q=";
-        for(i in users)
+        for(var i in users)
         {
-            url = url + "user:" + users[i];
+            url = url + "user:" + users[i] + "+";
         }
         url = url + "topic:" + keyword + "&sort=stars&per_page=40";
 
@@ -92,25 +60,16 @@ var browse = {
         widget.getJSON(constructURL(keyword, orgs), function(response) {
             widget.updateRepoDetails(widget.topRepos(response), widgetId);
             widget.updateLastPush(widget.lastPushedDay(response), widgetId);
->>>>>>> jekrame/discoverability
         });
     },
 
     getJSON:(url, callback) => {
-<<<<<<< HEAD
-        var result
-=======
->>>>>>> jekrame/discoverability
         var request = new XMLHttpRequest();
         request.open('GET', url, true);
         request.setRequestHeader('Accept', 'application/vnd.github.mercy-preview+json');
         request.onload = function () {
             if (request.status === 200) {
                 var data = JSON.parse(request.responseText);
-<<<<<<< HEAD
-                result = data.items;
-=======
->>>>>>> jekrame/discoverability
                 callback(data.items);
             }
         };
