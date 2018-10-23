@@ -58,13 +58,13 @@ var widget = {
             }
             else
             {
-                return;
+                keyword = parentNode.dataset.browsetopic;
             }
 
             parentNode.setAttribute("id", widget_name);
             widget.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
 
-            widget.fetchRepos(keyword, "#" + widget_name, orgs);
+            widget.fetchRepos(keyword, "#" + widget_name,);
         }
     },
 
