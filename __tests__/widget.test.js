@@ -1,5 +1,5 @@
 var $ = require("jquery");
-const browse = require('./../src/browse');
+const browse = require('./../src/widget');
 jest.mock('./../src/json');
 
 test('Make sure constructURL method constructs the right url', () =>{
@@ -62,4 +62,5 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
 test('check to make sure getJSON is using mocked version', () => {
     const json = require('./../src/json');
     console.log(json.getJSON('someurl', function(){return null}));
+    
 });
