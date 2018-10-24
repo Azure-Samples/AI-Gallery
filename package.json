@@ -4,6 +4,7 @@
   "private": true,
   "description": "You can use the [editor on GitHub](https://github.com/jpe316/AzureAIGallery/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
   "scripts": {
+    "dev-test": "jest --watch",
     "test": "jest",
     "develop": "webpack --mode development --watch",
     "build": "webpack --mode production"

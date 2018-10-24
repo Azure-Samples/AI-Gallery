@@ -1,10 +1,11 @@
 var $ = require("jquery");
 const browse = require('./../src/browse');
+jest.mock('./../src/json');
 
 test('Make sure constructURL method constructs the right url', () =>{
-    var expectedURL = "https://api.github.com/search/repositories?q=user:azure-samples+user:microsoft+user:azure+topic:iot&sort=stars&per_page=40";
+    var expectedURL = "https://api.github.com/search/repositories?q=user:Microsoft+user:Azure+user:Azure-Samples+topic:iot&sort=stars&per_page=40";
     expect(browse.constructURL('iot', ['Microsoft', 'Azure', 'Azure-Samples'])).toBe(expectedURL);
-}),
+});
 
 test('make sure topRepos sorts as intended and only returns 5 repositories', () => {
     var repo1 = {
@@ -56,4 +57,9 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
     expect(repos.length).toBe(5);
     expect(repos[0].stars).toBe(6);
     expect(repos[3].stars).toBe(3);
-})
+});
+
+test('check to make sure getJSON is using mocked version', () => {
+    const json = require('./../src/json');
+    console.log(json.getJSON('someurl', function(){return null}));
+});
