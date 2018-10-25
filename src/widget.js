@@ -1,5 +1,8 @@
+const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
+
+
 var widget = {
-    
+
     init:() => {
         $(document).ready(function() {
             document.getElementById('btnSearch').addEventListener("click", widget.restart);
@@ -36,6 +39,7 @@ var widget = {
 
     start:() => {
         widget.appendToWidget("body", "style", "", "@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);.gh-widget-link,.gh-widget-link:hover{text-decoration:none}.gh-widget-container{display:flex;flex-direction:row;flex-wrap:no-wrap;align-items:center;justify-content:center;color:#333;font-family:'Noto Sans',sans-serif}.gh-widget-personal-details .bio,.gh-widget-stats .count{color:#4078C0}.github-widget{border:1px solid #DDD;max-width:350px}.gh-widget-item{flex:1;text-align:center;padding:10px}.gh-widget-repositories .language{text-align:left}.gh-widget-repositories .language div,.gh-widget-repositories .stars div{padding:5px 0}.gh-widget-photo{flex:2}.gh-widget-photo img{border-radius:100%;max-width:90px}.gh-widget-personal-details{flex:6}.gh-widget-personal-details .full-name{font-size:1.5em;line-height:1.5em}.gh-widget-personal-details .location{font-size:.8em}.gh-widget-stats .count{font-size:1.2em;font-weight:700}.gh-widget-repositories .names{flex:2;text-align:left}.gh-widget-repositories .names div{padding:5px 0;text-overflow:ellipsis}.gh-widget-follow{flex:2}.gh-widget-active-time{flex:4;font-size:.8em}.gh-widget-heading{font-weight:400;color:#666}.gh-widget-hr{border:1px solid #DDD}.gh-widget-link{color:#4078C0}.gh-widget-follow button{width:100%;height:2em;border:none;background:#ddd}.gh-widget-topic{display:inline-block;padding:0.3em 0.9em;margin:0 0.5em 0.5em 0;background-color:#f1f8ff;border-radius:3px;float:left;font-size:12px !important;height:50px;verital-align:middle;text-align:center}");
+        console.log("start: " + widget.accounts);
 
         var widgets = document.querySelectorAll('.github-widget');
         for (var i = 0; i < widgets.length; i++) {
@@ -49,7 +53,7 @@ var widget = {
             {
                 keyword = document.getElementById('keyword').value;
             }
-            else 
+            else
             {
                 keyword = parentNode.dataset.browsetopic;
             }
@@ -57,23 +61,26 @@ var widget = {
             parentNode.setAttribute("id", widget_name);
             widget.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
 
-            widget.fetchRepos(keyword, "#" + widget_name);
+            widget.fetchRepos(keyword, "#" + widget_name, orgs);
         }
     },
 
-    fetchRepos:(keyword, widgetId) => {
-        var url = "https://api.github.com/search/repositories?q=topic:" + keyword + "&sort=stars&per_page=1000";
-        widget.getJSON(url, function(response) {
+
+    constructURL:(keyword, users) => {
+        var url = "https://api.github.com/search/repositories?q=";
+        for(var i in users)
+        {
+            url = url + "user:" + users[i] + "+";
+        }
+        url = url + "topic:" + keyword + "&sort=stars&per_page=40";
+
+        return url;
+    },
+    
+    fetchRepos:(keyword, widgetId, orgs) => {
+        widget.getJSON(constructURL(keyword, orgs), function(response) {
             widget.updateRepoDetails(widget.topRepos(response), widgetId);
             widget.updateLastPush(widget.lastPushedDay(response), widgetId);
-        });
-    },
-
-
-    fetchUserDetails:(username, widgetId) => {
-        var url = "https://api.github.com/users/" + username;
-        widget.getJSON(url, function(response) {
-            widget.updateUserDetails(response, widgetId);
         });
     },
 
@@ -93,22 +100,6 @@ var widget = {
             }
         }
         return Math.floor((now - latestDate) / (1000 * 3600 * 24));
-    },
-
-    updateUserDetails:(user, widgetId) => {
-
-        widget.appendToWidget(widgetId + " .gh-widget-personal-details", "div", "full-name", user.name);
-        if (user.bio) {
-            widget.appendToWidget(widgetId + " .gh-widget-personal-details", "div", "bio", user.bio);
-        }
-        if (user.location) {
-            widget.appendToWidget(widgetId + " .gh-widget-personal-details", "div", "location", '&#9906; ' + user.location);
-        }
-        widget.appendToWidget(widgetId + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count">' + user.followers + '</div><div class="stat-name">Followers</div>');
-        widget.appendToWidget(widgetId + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count">' + user.following + '</div><div class="stat-name">Following</div>');
-        widget.appendToWidget(widgetId + " .gh-widget-stats", "div", "gh-widget-item", '<div class="count">' + user.public_repos + '</div><div class="stat-name">Repositories</div>');
-        widget.appendToWidget(widgetId + " .gh-widget-photo", "span", "", '<img src="' + user.avatar_url + '">');
-        widget.appendToWidget(widgetId + " .gh-widget-follow", "button", "", '<a class="gh-widget-link" target="new" href="' + user.html_url + '">Follow</a>')
     },
 
     updateRepoDetails:(repos, widgetId) => {

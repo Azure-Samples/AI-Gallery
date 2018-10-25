@@ -1,11 +1,8 @@
 var $ = require("jquery");
+const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
 
 var browse = {
-    init: (buttons, fn) => {
-        for(var i = 0; i < buttons.length; i ++)
-        {
-            console.log(buttons[i]) 
-        }
+    init:() => {
         $(document).ready(function() {
             document.getElementById('OnnxSearch').addEventListener("click", function () {
                 browse.restart("onnx");
@@ -24,13 +21,18 @@ var browse = {
     start:(keyword) => {
         var widgets = document.querySelectorAll('.github-widget');
         for (var i = 0; i < widgets.length; i++) {
+
             var parentNode = widgets[i];
             var type = parentNode.getAttribute("data-type");
             var widget_name = type + "_widget" + i;
+            if (keyword === null)
+            {
+                keyword = parentNode.dataset.browsetopic;
+            }
             // get input depending on the type
             if (type === "browse") {
                 browse.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>');
-                browse.fetchRepos(keyword, "#" + widget_name);
+                browse.fetchRepos(keyword, "#" + widget_name, orgs);
             }
         }
     },
@@ -43,11 +45,21 @@ var browse = {
         parentNode.appendChild(childNode);
     },
 
-    fetchRepos:(keyword, widgetId) => {
-        var url = "https://api.github.com/search/repositories?q=topic:" + keyword + "&sort=stars&per_page=1000";
-        browse.getJSON(url, function (response) {
-            browse.updateRepoDetails(browse.topRepos(response), widgetId);
-            browse.updateLastPush(browse.lastPushedDay(response), widgetId);
+    constructURL:(keyword, users) => {
+        var url = "https://api.github.com/search/repositories?q=";
+        for(var i in users)
+        {
+            url = url + "user:" + users[i] + "+";
+        }
+        url = url + "topic:" + keyword + "&sort=stars&per_page=40";
+
+        return url;
+    },
+    
+    fetchRepos:(keyword, widgetId, orgs) => {
+        widget.getJSON(constructURL(keyword, orgs), function(response) {
+            widget.updateRepoDetails(widget.topRepos(response), widgetId);
+            widget.updateLastPush(widget.lastPushedDay(response), widgetId);
         });
     },
 
