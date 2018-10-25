@@ -1,10 +1,10 @@
 var $ = require("jquery");
-const browse = require('./../src/widget');
+const widget = require('./../src/widget');
 jest.mock('./../src/json');
 
 test('Make sure constructURL method constructs the right url', () =>{
     var expectedURL = "https://api.github.com/search/repositories?q=user:Microsoft+user:Azure+user:Azure-Samples+topic:iot&sort=stars&per_page=40";
-    expect(browse.constructURL('iot', ['Microsoft', 'Azure', 'Azure-Samples'])).toBe(expectedURL);
+    expect(widget.constructURL('iot', ['Microsoft', 'Azure', 'Azure-Samples'])).toBe(expectedURL);
 });
 
 test('make sure topRepos sorts as intended and only returns 5 repositories', () => {
@@ -52,7 +52,7 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
     };
     var repos = [repo1, repo3, repo4, repo6,repo5, repo2];
 
-    repos = browse.topRepos(repos);
+    repos = widget.topRepos(repos);
 
     expect(repos.length).toBe(5);
     expect(repos[0].stars).toBe(6);
@@ -63,3 +63,9 @@ test('check to make sure getJSON is using mocked version', () => {
     const json = require('./../src/json');
     console.log(json.getJSON('someurl', function(){return null}));
 });
+
+test('check that cleanseKeyword correctly manipulates the keyword', () => {
+    var testString = "hello world"
+    var expectedString = "topic:hello+topic:world"
+    expect(widget.cleanseKeyword(testString)).toBe(expectedString);
+})

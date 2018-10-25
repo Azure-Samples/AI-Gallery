@@ -69,13 +69,17 @@ var widget = {
         }
     },
 
+    cleanseKeyword:(keyword) => {
+        return "topic:" + keyword.replace(/ /g, "+topic:");
+    },
+
     constructURL:(keyword, users) => {
         var url = "https://api.github.com/search/repositories?q=";
         for(var i in users)
         {
             url = url + "user:" + users[i] + "+";
         }
-        url = url + "topic:" + keyword + "&sort=stars&per_page=40";
+        url = url + widget.cleanseKeyword(keyword) + "&sort=stars&per_page=40";
 
         return url;
     },
