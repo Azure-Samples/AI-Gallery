@@ -18,23 +18,13 @@ classes: landing
 2. ML experiments
 3. Example use cases for ML models in the real world
 
-<br/>
-<br/>
-
 * * *
 
 # Featured
 
 ## Models
 
-<div class="menu-wrapper" id="model-wrapper">
-    <ul class="menu models" id="models-menu">
-    </ul>
-    <div class="paddles">
-        <button class="left-paddle paddle hidden" id="model-left"><</button>
-        <button class="right-paddle paddle" id="model-right">></button>
-    </div>
-</div>
+<div id="models"></div>
 
 * * *
 
@@ -57,24 +47,15 @@ classes: landing
 # Discover
 ## Search Topics: 
 
-<div class="content-container">
-    <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
-    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" width="100%"></div>
-</div>
 
-<div class="github-widget" data-type="search"></div>
+<div id="search"></div>
+
+
 
 ## Browse these Top Repos: 
 
-<div class="content-container">
-        <div ><input type="button" id="OnnxSearch" value="Onnx" class="button browsebtn noselect" /></div>
-        <div ><input type="button" id="TensorflowSearch" value="Tensorflow" class="button  browsebtn noselect"/></div>
-</div>
 
-<div id="browse_content">
-    <div class="browse_result" style="display:inline-block; width:100%; vertical-align: top">
-        <div class="github-widget" id='browse_widget1' data-type="browse" data-browseTopic="onnx"></div>
-    </div>
-</div>
+<div id="browse"></div>
+
 
 <script type="text/javascript" src="./src/content-scroller.js"></script>
