@@ -22,4 +22,4 @@ class Models extends Component {
 
 }
 
-render(<Models />, document.getElementById('models'));
+render(<Models />, document.getElementById('models-container'));

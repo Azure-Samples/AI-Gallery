@@ -24,15 +24,16 @@ classes: landing
 
 ## Models
 
-<div id="models"></div>
+<div id="models-container"></div>
 
 * * *
 
 
 <br/>
+
 ## Examples
 
-<div id="examples"></div>
+<div id="examples-container"></div>
 
 * * *
 <br/>
@@ -41,13 +42,6 @@ classes: landing
 # Discover
 ## Search Topics: 
 
-<<<<<<< HEAD
-=======
-<div class="content-container">
-    <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
-    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='iot' class="searchbar" width="100%"></div>
-</div>
->>>>>>> master
 
 <div id="search"></div>
 

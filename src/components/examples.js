@@ -22,4 +22,4 @@ class Examples extends Component {
 
 }
 
-render(<Examples />, document.getElementById('examples'));
+render(<Examples />, document.getElementById('examples-container'));
