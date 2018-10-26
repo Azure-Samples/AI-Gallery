@@ -31,14 +31,8 @@ classes: landing
 
 <br/>
 ## Examples
-<div class="menu-wrapper" id="example-wrapper">
-    <ul class="menu examples" id="examples-menu">
-    </ul>
-    <div class="paddles">
-        <button class="left-paddle paddle hidden" id="example-left"><</button>
-        <button class="right-paddle paddle" id="example-right">></button>
-    </div>
-</div>
+
+<div id="examples"></div>
 
 * * *
 <br/>
