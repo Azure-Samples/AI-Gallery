@@ -29,7 +29,6 @@ classes: landing
 
 <div id="models-container"></div>
 
-* * *
 
 
 <br/>
@@ -38,7 +37,6 @@ classes: landing
 
 <div id="examples-container"></div>
 
-* * *
 <br/>
 
 

@@ -83,15 +83,6 @@ html {
                                     supported by Chrome and Opera */
   }
 
-
-#model-wrapper{
-    height:400px;
-}
-
-.item{
-    height:350px;
-}
-
 #header{
     background-color: #4078C0; 
     position:absolute;
