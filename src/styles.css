@@ -1,7 +1,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
     line-height: 1.5;
-    margin: 3em;
+    margin:3em;
+    margin-top:10em;
 }
 
 html {
@@ -89,4 +90,21 @@ html {
 
 .item{
     height:350px;
+}
+
+#header{
+    background-color: #4078C0; 
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    padding:3em;
+}
+
+#content{
+    padding:3em;
+}
+
+.main-heading{
+    color:white;
 }
