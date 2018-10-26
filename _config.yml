@@ -2,5 +2,5 @@ theme: minimal-mistakes-jekyll
 title: Azure AI Gallery
 
 include: [dist, src, _site, node_modules]
-exclude: [./testing]
+exclude: [./__tests__]
 ignore: package.json

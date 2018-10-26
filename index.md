@@ -1,3 +1,4 @@
+---
 classes: landing
 
 ---
@@ -58,7 +59,7 @@ classes: landing
 
 <div class="content-container">
     <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
-    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='mnist' class="searchbar" width="100%"></div>
+    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='iot' class="searchbar" width="100%"></div>
 </div>
 
 <div class="github-widget" data-type="search"></div>
