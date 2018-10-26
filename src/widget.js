@@ -1,5 +1,5 @@
 const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
-const json = require('./json');
+const jsonHelper = require('./jsonHelper');
 
 
 var widget = {
@@ -85,7 +85,7 @@ var widget = {
     },
     
     fetchRepos:(keyword, widgetId, orgs) => {
-        json.getJSON(widget.constructURL(keyword, orgs), function(response) {
+        jsonHelper.getJSON(widget.constructURL(keyword, orgs), function(response) {
             widget.updateRepoDetails(widget.topRepos(response), widgetId);
             widget.updateLastPush(widget.lastPushedDay(response), widgetId);
         });
