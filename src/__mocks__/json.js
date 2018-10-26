@@ -1,9 +1,9 @@
-const json = jest.genMockFromModule('./../json');
+const jsonHelper = jest.genMockFromModule('./../jsonHelper');
 
 function getJSON(url, callback) {
     return {"success":"true"};
 }
 
-json.getJSON = getJSON;
+jsonHelper.getJSON = getJSON;
 
-module.exports = json;
+module.exports = jsonHelper;

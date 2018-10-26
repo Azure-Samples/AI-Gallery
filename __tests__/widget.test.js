@@ -1,6 +1,6 @@
 var $ = require("jquery");
 const widget = require('./../src/widget');
-jest.mock('./../src/json');
+jest.mock('./../src/jsonHelper');
 
 test('Make sure constructURL method constructs the right url', () =>{
     var expectedURL = "https://api.github.com/search/repositories?q=user:Microsoft+user:Azure+user:Azure-Samples+topic:iot&sort=stars&per_page=40";
@@ -60,7 +60,7 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
 });
 
 test('check to make sure getJSON is using mocked version', () => {
-    const json = require('./../src/json');
+    const json = require('./../src/jsonHelper');
     console.log(json.getJSON('someurl', function(){return null}));
 });
 
