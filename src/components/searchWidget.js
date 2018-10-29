@@ -4,6 +4,7 @@ import SliderContent from './sliderContent';
 import githubApiInterface from './../githubApiInterface';
 
 
+//TODO: Implement that Browse/Search use this instead of ./../widget.js
 export default class searchWidget extends Component {
     constructor(props){
         super(props);
