@@ -1,5 +1,4 @@
 body {
-	margin: 3em;
 }
 
 * {
@@ -11,6 +10,8 @@ body {
     position: relative;
 	overflow-x: none;
     overflow-y: none;
+    background-color:#f2f2f2;
+    padding:1em;
 }
 
 .menu	{
@@ -27,15 +28,10 @@ body {
 }
 
 .examplesitem {
-    width:250px;
-    margin:10px;
-    display: inline-block;
 }
 
 .modelsitem {
-    width:250px;
-    margin:10px;
-    display: inline-block;
+    vertical-align:top;
 }
 
 .buffer {
