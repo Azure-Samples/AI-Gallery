@@ -13,7 +13,6 @@ $(document).ready(function (){
     render(<Models />, document.getElementById('models-container'));
     
     var content = require('./populate-content');
-    var contentScroller = require('./content-scroller');
     var cardWidget = require('./card-widget');
 
     widget.init();

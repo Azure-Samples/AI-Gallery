@@ -1,0 +1,1 @@
+var contentScroller = require('./../src/content-scroller');

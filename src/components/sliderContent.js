@@ -5,13 +5,14 @@ const config = require('./../config');
 export default class SliderContent extends Component {
     constructor(props){
         super(props);
-        this.keyword = props.keyword;
+        this.length= props.length.bind(this);
     }
 
     render(){
         var jsonString = config.getData();
         var json = JSON.parse(jsonString);
         var data = json[this.keyword];
+        this.length(data.length);
             return (
             <ul className={["menu", this.keyword].join(' ')} id={[this.keyword,"menu"].join('-')} >
                 {data.map(obj => (
