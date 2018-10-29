@@ -8,18 +8,18 @@ classes: landing
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./dist/bundle.js"></script>
 
-# Azure AI Gallery
+<div id="header">
+    <h1 class="main-heading">Azure AI Gallery</h1>
+</div>
 
-## Experimental
 
-### The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including:
+<h3> Experimental</h3>
+
+<h4>The AI Gallery enables a growing community of developers and data scientists to browse curated AI examples, including: </h4>
 
 1. ML models
 2. ML experiments
 3. Example use cases for ML models in the real world
-
-<br/>
-<br/>
 
 * * *
 
@@ -27,54 +27,29 @@ classes: landing
 
 ## Models
 
-<div class="menu-wrapper" id="model-wrapper">
-    <ul class="menu models" id="models-menu">
-    </ul>
-    <div class="paddles">
-        <button class="left-paddle paddle hidden" id="model-left"><</button>
-        <button class="right-paddle paddle" id="model-right">></button>
-    </div>
-</div>
+<div id="models-container"></div>
 
-* * *
 
 
 <br/>
-## Examples
-<div class="menu-wrapper" id="example-wrapper">
-    <ul class="menu examples" id="examples-menu">
-    </ul>
-    <div class="paddles">
-        <button class="left-paddle paddle hidden" id="example-left"><</button>
-        <button class="right-paddle paddle" id="example-right">></button>
-    </div>
-</div>
 
-* * *
+## Examples
+
+<div id="examples-container"></div>
+
 <br/>
 
 
 # Discover
 ## Search Topics: 
 
-<div class="content-container">
-    <input type="button" id="btnSearch" value="Search" class="button btnSearch  searchbtn noselect"/>
-    <div  class="searchbar-container"><input type='text' id='keyword' name='keyword' value='iot' class="searchbar" width="100%"></div>
-</div>
 
-<div class="github-widget" data-type="search"></div>
+<div id="search"></div>
+
+
 
 ## Browse these Top Repos: 
 
-<div class="content-container">
-        <div ><input type="button" id="OnnxSearch" value="Onnx" class="button browsebtn noselect" /></div>
-        <div ><input type="button" id="TensorflowSearch" value="Tensorflow" class="button  browsebtn noselect"/></div>
-</div>
 
-<div id="browse_content">
-    <div class="browse_result" style="display:inline-block; width:100%; vertical-align: top">
-        <div class="github-widget" id='browse_widget1' data-type="browse" data-browseTopic="onnx"></div>
-    </div>
-</div>
+<div id="browse"></div>
 
-<script type="text/javascript" src="./src/content-scroller.js"></script>

@@ -2,6 +2,7 @@ var $ = require("jquery");
 const widget = require('./../src/widget');
 jest.mock('./../src/githubApiInterface');
 
+
 test('Make sure constructURL method constructs the right url', () =>{
     var expectedURL = "https://api.github.com/search/repositories?q=user:Microsoft+user:Azure+user:Azure-Samples+topic:iot&sort=stars&per_page=40";
     expect(widget.constructURL('iot', ['Microsoft', 'Azure', 'Azure-Samples'])).toBe(expectedURL);

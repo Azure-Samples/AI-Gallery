@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot of SliderContent (examples) 1`] = `
+<ul
+  className="menu examples"
+  id="examples-menu"
+>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-PredictiveMaintenance"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-SentimentAnalysis"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-ChurnPrediction"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-QnAMatching"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="examplesitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure/MachineLearningSamples-AerialImageClassification"
+      data-theme="medium"
+    />
+  </li>
+</ul>
+`;
+
+exports[`renders a snapshot of SliderContent (models) 1`] = `
+<ul
+  className="menu models"
+  id="models-menu"
+>
+  <li
+    className="modelsitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure-Samples/AI-Gallery-InceptionV3"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="modelsitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="Azure-Samples/AI-Gallery-TinyYolo"
+      data-theme="medium"
+    />
+  </li>
+  <li
+    className="modelsitem item"
+  >
+    <div
+      className={
+        Array [
+          "github-card",
+        ]
+      }
+      data-github="onnx/models"
+      data-theme="medium"
+    />
+  </li>
+</ul>
+`;
