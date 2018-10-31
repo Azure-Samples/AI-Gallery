@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 
-class Search extends Component {
+export default class Search extends Component {
     render(){
         return (
             <div>
@@ -16,5 +16,3 @@ class Search extends Component {
     }
 
 }
-
-render(<Search />, document.getElementById('search'));

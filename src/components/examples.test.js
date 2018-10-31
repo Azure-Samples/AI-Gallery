@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer'
-import Browse from './browse';
+import Examples from './examples';
 
 
-test('renders a snapshot of browse', () => {
-    const tree = renderer.create(<Browse/>).toJSON();
+test('renders a snapshot of Examples', () => {
+    const tree = renderer.create(<Examples/>).toJSON();
     expect(tree).toMatchSnapshot();
 })

@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import SliderContent from './sliderContent';
 
 
-class Models extends Component {
+export default class Models extends Component {
 
 
     render(){
@@ -21,5 +21,3 @@ class Models extends Component {
     }
 
 }
-
-render(<Models />, document.getElementById('models-container'));

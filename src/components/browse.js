@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
 
-class Browse extends Component {
+export default class Browse extends Component {
     render(){
             return (
             <div>
@@ -21,5 +20,3 @@ class Browse extends Component {
     }
 
 }
-
-render(<Browse />, document.getElementById('browse'));

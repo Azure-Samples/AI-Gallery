@@ -8,15 +8,6 @@ var data = {
         },
         {
             "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
         }
     ],
     "examples": [
