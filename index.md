@@ -27,22 +27,11 @@ classes: landing
 
 ## Models
 
-<<<<<<< HEAD
-<div id="models"></div>
-=======
 <div id="models-container"></div>
->>>>>>> jekrame/unit-testing-wip
-
-
 
 <br/>
 
 ## Examples
-<<<<<<< HEAD
-
-<div id="examples"></div>
-=======
->>>>>>> jekrame/unit-testing-wip
 
 <div id="examples-container"></div>
 
