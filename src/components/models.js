@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import SliderContent from './sliderContent';
+import Carousel from './carousel';
+import $ from 'jquery';
 
 
-class Models extends Component {
+export default class Models extends Component {
+    constructor(props){
+        super(props);
+    }
 
 
     render(){
             return (
             <div>
                 <div class="menu-wrapper" id="model-wrapper">
-                    <SliderContent keyword={"models"}/>
-                    <div class="paddles">
-                        <button class="left-paddle paddle hidden" id="model-left">&lt;</button>
-                        <button class="right-paddle paddle" id="model-right">&gt;</button>
-                    </div>
+                    <Carousel keyword={"models"}/>
                 </div>
             </div>
         )
     }
 
 }
-
-render(<Models />, document.getElementById('models'));

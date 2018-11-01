@@ -1,19 +1,10 @@
 var data = {
     "models": [
         {
-            "link": "onnx/models"
+            "link": "Azure-Samples/AI-Gallery-InceptionV3"
         },
         {
-            "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
-        },
-        {
-            "link": "onnx/models"
+            "link":"Azure-Samples/AI-Gallery-TinyYolo"
         },
         {
             "link": "onnx/models"

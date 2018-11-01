@@ -1,4 +1,4 @@
-var json = {
+var githubApiInterface = {
     getJSON:(url, callback) => {
         var request = new XMLHttpRequest();
         request.open('GET', url, true);
@@ -13,4 +13,4 @@ var json = {
     },
 }
 
-module.exports = json;
+module.exports = githubApiInterface;

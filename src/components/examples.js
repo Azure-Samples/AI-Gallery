@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import SliderContent from './sliderContent';
+import Carousel from './carousel';
 
 
-class Examples extends Component {
-
+export default class Examples extends Component {
+    constructor(props){
+        super(props);
+    }
 
     render(){
             return (
             <div>
-                <div class="menu-wrapper" id="model-wrapper">
-                    <SliderContent keyword={"examples"}/>
-                    <div class="paddles">
-                        <button class="left-paddle paddle hidden" id="example-left">&lt;</button>
-                        <button class="right-paddle paddle" id="example-right">&gt;</button>
-                    </div>
+                <div class="menu-wrapper" id="example-wrapper">
+                    <Carousel keyword={"examples"}/>
                 </div>
             </div>
         )
     }
 
 }
-
-render(<Examples />, document.getElementById('examples'));

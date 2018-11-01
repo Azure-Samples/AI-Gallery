@@ -47,3 +47,8 @@ Package and build all modules by running `npm run build` to build the production
 # Editing Models/Examples
 
 Models and examples can be edited by editing the JSON contained in the config.js file.
+
+
+## Updating Snapshots
+
+If the snapshot tests are failing, and you have confirmed that the functionality is working, you may create a new snapshot by running `npm test -- -u`

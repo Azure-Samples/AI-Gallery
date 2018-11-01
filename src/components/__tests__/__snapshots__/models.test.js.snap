@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot of Models 1`] = `
+<div>
+  <div
+    class="menu-wrapper"
+    id="model-wrapper"
+  >
+    <div>
+      <ul
+        className="menu models"
+        id="models-menu"
+      >
+        <li
+          className="modelsitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure-Samples/AI-Gallery-InceptionV3"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="modelsitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure-Samples/AI-Gallery-TinyYolo"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="modelsitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="onnx/models"
+            data-theme="medium"
+          />
+        </li>
+      </ul>
+      <div
+        class="paddles"
+      >
+        <button
+          class="left-paddle paddle hidden"
+          id="models-left"
+          onClick={[Function]}
+        >
+          &lt;
+        </button>
+        <button
+          class="right-paddle paddle"
+          id="models-right"
+          onClick={[Function]}
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

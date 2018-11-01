@@ -1,5 +1,5 @@
 const orgs = ['Microsoft', 'Azure', 'Azure-Samples'];
-const json = require('./json');
+const githubApiInterface = require('./githubApiInterface');
 
 
 var widget = {
@@ -40,32 +40,39 @@ var widget = {
             var parentNode = widgets[i];
             var type = parentNode.dataset.type;
             var widget_name =  type + "_widget" + i;
-            
             var keyword = '';
+
+            /* 
+                If key is search or all, update both widgets, otherwise update one and skip the other since this
+                iterates all widgets every time a click event is fired. Not continuing would cause both widgets to
+                reload on any click, creating a bad user experience. 
+            */
+
             if (type === "search")
             {
-                if(key === "search" || key === "all")
+                if(key != "search" && key != "all")
                 {
+                    continue;
+                }
+                else{
                     keyword = document.getElementById('keyword').value;
-                    
-                    parentNode.setAttribute("id", widget_name);
-                    widget.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
-                    widget.fetchRepos(keyword, "#" + widget_name, orgs);
                 }
             }
+
             else if (type === "browse")
             {
-                if(key !== "search")
+                if(key === "search")
+                {
+                    continue;
+                }
+                else
                 {
                     keyword = (key!="all") ? key : parentNode.dataset.browsetopic;
-                    
-                    parentNode.setAttribute("id", widget_name);
-                    widget.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
-                    widget.fetchRepos(keyword, "#" + widget_name, orgs);
                 }
-
             }
-
+            parentNode.setAttribute("id", widget_name);
+            widget.appendToWidget("#" + widget_name, "div", "", '<div class="gh-widget-container"><div class="gh-widget-item gh-widget-photo"></div><div class="gh-widget-item gh-widget-personal-details"></div></div><div class="gh-widget-container gh-widget-stats"></div><hr class="gh-widget-hr"><div class="gh-widget-container"><div class="gh-widget-item gh-widget-heading">Top repositories for "' + keyword + '"</div></div><div class="gh-widget-repositories"></div><div class="gh-widget-container"><div class="gh-widget-item gh-widget-follow"></div><div class="gh-widget-item gh-widget-active-time"></div></div>')
+            widget.fetchRepos(keyword, "#" + widget_name, orgs);
         }
     },
 
@@ -85,7 +92,7 @@ var widget = {
     },
     
     fetchRepos:(keyword, widgetId, orgs) => {
-        json.getJSON(widget.constructURL(keyword, orgs), function(response) {
+        githubApiInterface.getJSON(widget.constructURL(keyword, orgs), function(response) {
             widget.updateRepoDetails(widget.topRepos(response), widgetId);
             widget.updateLastPush(widget.lastPushedDay(response), widgetId);
         });
