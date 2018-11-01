@@ -42,6 +42,7 @@ export default class Carousel extends Component {
         this.menuSize = this.getMenuSize(this.length, this.itemWidth);
         this.menuInvisibleSize = this.getMenuInvisibleSize();
         this.menuPosition = this.getMenuPosition();
+        this.hidePaddles(this.scroll(this.menuPosition, this.menuWrapperSize, this.menuSize, this.menuInvisibleSize));
     }
 
     updateLength(x){
@@ -70,7 +71,7 @@ export default class Carousel extends Component {
 
     getScrollAmount(menuPos, wrapperSize, total, dir){
         if(dir === "left"){
-            return (menuPos - wrapperSize/2) < 0 ? 0 : menuPos - this.menuWrapperSize/2;
+            return (menuPos - wrapperSize/2) < 0 ? 0 : menuPos - wrapperSize/2;
         }
         else if (dir === "right"){
             return (menuPos + wrapperSize/2) > total ? total : menuPos + wrapperSize/2;
@@ -93,22 +94,30 @@ export default class Carousel extends Component {
         var scrollDuration = 300;
         this.menuPosition = scrollAmount;
         $(this.menuName).animate({ scrollLeft: scrollAmount}, scrollDuration);
-        var paddleVisibility = this.scroll(this.menuPosition, this.menuWrapperSize, this.menuSize, this.menuInvisibleSize);
-        this.hidePaddles(paddleVisibility);
+        this.hidePaddles(this.scroll(this.menuPosition, this.menuWrapperSize, this.menuSize, this.menuInvisibleSize));
     }
 
     scroll(pos, visibleWidth, totalWidth, invisibleSize){
-        if(pos <= this.paddleMargin) {
+        //Pos will be null when rendering component for tests, return insignificant value in this case
+        if(pos == null){
+            return [0,0];
+        }
+
+        if(invisibleSize <= 0){
+            //hide both paddles
+            return [0,0];
+        }
+        else if(pos <= 0 ) {
+            //hide left
             return [0,1];
         }
         else if(pos + visibleWidth < totalWidth){
+            //show both
             return [1, 1];
         }
         else if(pos + visibleWidth >= totalWidth){
+            //hide right
             return [1, 0];
-        }
-        else if(invisibleSize <= 0){
-            return [0, 0];
         }
     }
 

@@ -29,7 +29,7 @@ module.exports = {
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
                 test: /\.js$/,
-                exclude: [/node_modules/, /_testing/],
+                exclude: [/node_modules/, /__tests__/, './src/components/__snapshots__', './src/components/__tests__'],
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015']
@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 test: /\.jsx?$/,
-                exclude: [/node_modules/, /__tests__/],
+                exclude: [/node_modules/, /__tests__/, './src/components/__snapshots__', './src/components/__tests__'],
                 loader: 'babel-loader',
                 query: {
                     presets: ['react','es2015']

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import SliderContent from './sliderContent';
 import githubApiInterface from './../githubApiInterface';
 
 
@@ -29,6 +28,25 @@ export default class searchWidget extends Component {
     }
     
     fetchRepos(keyword, orgs){
+        //creates component with template return for unit testing
+        if(keyword == "bypassFetch"){
+            return [
+                {
+                    name: "1",
+                    stargazers_count:1,
+                    language: "html",
+                    html_url: "repo1",
+                    topic: "test"
+                },
+                {
+                    name: "2",
+                    stargazers_count:2,
+                    language: "html",
+                    html_url: "repo2",
+                    topic: "test"
+                }
+            ];
+        }
         return githubApiInterface.getJSON(this.constructURL(keyword, orgs), function(response) {this.topRepos(response)});
     }
 
@@ -59,13 +77,13 @@ export default class searchWidget extends Component {
     }
 
     displayResults(r){
-        return <li href={r.repoUrl}> <ul> <li>{r.name}</li><li>{r.stars}</li><li>{r.language}</li><li>{r.topics}</li></ul></li>
+        return <li href={r.repoUrl} key={r.name}> <ul> <li>{r.name}</li><li>{r.stars}</li><li>{r.language}</li><li>{r.topics}</li></ul></li>
     }
 
     render(){
             return (
             <ul>
-                {this.repos.map(this.displayResults(r))}
+                {Array.isArray(this.repos) && this.repos.map((r) => this.displayResults(r))}
             </ul>
         )
     }

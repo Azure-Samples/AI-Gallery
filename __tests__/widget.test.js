@@ -60,11 +60,6 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
     expect(repos[3].stars).toBe(3);
 });
 
-test('check to make sure getJSON is using mocked version', () => {
-    const githubApiInterface = require('./../src/githubApiInterface');
-    console.log(githubApiInterface.getJSON('someurl', function(){return null}));
-});
-
 test('check that cleanseKeyword correctly manipulates the keyword', () => {
     var testString = "hello world"
     var expectedString = "topic:hello+topic:world"
