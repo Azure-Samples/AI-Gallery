@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import Carousel from './carousel';
-import $ from 'jquery';
 
 
 export default class Models extends Component {
