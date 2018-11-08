@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer'
-import SliderContent from './../sliderContent';
+import SliderContent from './sliderContent';
 
 
 test('renders a snapshot of SliderContent (models)', () => {

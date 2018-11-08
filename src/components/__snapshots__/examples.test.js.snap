@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a snapshot of Examples 1`] = `
+<div>
+  <div
+    class="menu-wrapper"
+    id="example-wrapper"
+  >
+    <div>
+      <ul
+        className="menu examples"
+        id="examples-menu"
+      >
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-PredictiveMaintenance"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-SentimentAnalysis"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-ChurnPrediction"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-QnAMatching"
+            data-theme="medium"
+          />
+        </li>
+        <li
+          className="examplesitem item"
+        >
+          <div
+            className={
+              Array [
+                "github-card",
+              ]
+            }
+            data-github="Azure/MachineLearningSamples-AerialImageClassification"
+            data-theme="medium"
+          />
+        </li>
+      </ul>
+      <div
+        class="paddles"
+      >
+        <button
+          class="left-paddle paddle hidden"
+          id="examples-left"
+          onClick={[Function]}
+        >
+          &lt;
+        </button>
+        <button
+          class="right-paddle paddle"
+          id="examples-right"
+          onClick={[Function]}
+        >
+          &gt;
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
