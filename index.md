@@ -3,8 +3,8 @@ classes: landing
 
 ---
 
-<link rel="stylesheet" type="text/css" href="./src/content-scroller.css"/>
-<link rel="stylesheet" type="text/css" href="./src/styles.css"/>
+<link rel="stylesheet" type="text/css" href="./src/css/content-scroller.css"/>
+<link rel="stylesheet" type="text/css" href="./src/css/styles.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./dist/bundle.js"></script>
 
@@ -28,8 +28,6 @@ classes: landing
 ## Models
 
 <div id="models-container"></div>
-
-
 
 <br/>
 

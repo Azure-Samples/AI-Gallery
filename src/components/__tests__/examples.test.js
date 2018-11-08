@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer'
-import Models from './models';
+import Examples from './../examples';
 
 
-test('renders a snapshot of Models', () => {
-    const tree = renderer.create(<Models/>).toJSON();
+test('renders a snapshot of Examples', () => {
+    const tree = renderer.create(<Examples/>).toJSON();
     expect(tree).toMatchSnapshot();
 })
