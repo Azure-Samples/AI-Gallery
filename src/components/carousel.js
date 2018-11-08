@@ -154,7 +154,6 @@ export default class Carousel extends Component {
                     {data.map(obj => (
                         <li className={[this.keyword+"item", "item"].join(' ')} key={obj.link}>
                                 <Card data={obj}/>
-                                <div className={["github-card"]} data-github={obj.full_name} data-theme="medium"></div>
                         </li>
                     ))}
                 </ul>

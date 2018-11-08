@@ -1,16 +1,3 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-family: "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
-  overflow: hidden;
-}
-body.ready {
-  border: 1px solid #eee;
-  border-radius: 5px;
-  border-color: #eee #ddd #bbb;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 3px;
-}
 
 .github-card {
   text-align: center;
@@ -24,7 +11,6 @@ body.ready {
   position: relative;
   padding: 55px 0;
   margin: 0;
-  height: 68px;
   border-radius: 4px 4px 0 0;
   background-size: cover;
   background-position: center;
@@ -130,8 +116,9 @@ body.ready {
   height: 48px;
 }
 .repo-card h1 {
-  margin: 50 0;
+  margin: 0;
   padding: 0;
+  overflow-x: wrap;
   color: white;
   font-size: 36px;
   font-weight: 400;
@@ -145,6 +132,12 @@ body.ready {
   opacity: 0.8;
 }
 .repo-card .content p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  white-space: normal;
   font-size: 16px;
   padding: 10px 20px;
 }
@@ -186,3 +179,9 @@ body.ready {
 .repo-card .Objective-C {
   background: #438eff;
 }
+
+/*
+Copyright (c) 2013 - 2014, Hsiaoming Yang
+
+All rights reserved.
+*/
