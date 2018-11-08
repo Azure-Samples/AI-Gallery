@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow, configure } from 'enzyme';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer'
 import SearchWidget from './../searchWidget';
+import GithubApiInterface from './../../githubApiInterface';
 import ReactDOMServer from 'react-dom/server';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -86,9 +85,6 @@ test('check that displayResults returns the correct list item format', () => {
         topics: "test"
     };
     var expected = "<li href=\"repo1\"> <ul> <li>name</li><li>1</li><li>html</li><li>test</li></ul></li>"
-    const wrapper = shallow(<SearchWidget keyword={'bypassFetch'}/>);
+    const wrapper = shallow(<SearchWidget  keyword={'iot'}/>);
     expect(ReactDOMServer.renderToStaticMarkup(wrapper.instance().displayResults(repo1))).toMatch(expected);
-    
-
-    
 })

@@ -14,6 +14,7 @@ $(document).ready(function (){
     
     var content = require('./populate-content');
     var cardWidget = require('./card-widget');
+    var card = require('./card');
 
     widget.init();
 });

@@ -184,7 +184,8 @@ var card = (function(d) {
             homepage = data.source.homepage;
         }
         if (homepage) {
-            data.homepage = ' <a href="' + homepage + '" + class="homepageURL">' + homepage.replace(/https?:\/\//, '').replace(/\/$/, '') + '</a>';
+            console.log(homepage);
+            data.homepage = ' <a class="repoURL" href="' + homepage + '" + class="homepageURL">' + homepage.replace(/https?:\/\//, '').replace(/\/$/, '') + '</a>';
         } else {
             data.homepage = '';
         }
