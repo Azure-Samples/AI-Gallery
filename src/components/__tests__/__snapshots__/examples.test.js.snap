@@ -15,11 +15,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-PredictiveMaintenance"
             data-theme="medium"
           />
@@ -28,11 +24,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-SentimentAnalysis"
             data-theme="medium"
           />
@@ -41,11 +33,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-ChurnPrediction"
             data-theme="medium"
           />
@@ -54,11 +42,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-BiomedicalEntityExtraction"
             data-theme="medium"
           />
@@ -67,11 +51,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-QnAMatching"
             data-theme="medium"
           />
@@ -80,11 +60,7 @@ exports[`renders a snapshot of Examples 1`] = `
           className="examplesitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure/MachineLearningSamples-AerialImageClassification"
             data-theme="medium"
           />

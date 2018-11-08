@@ -15,11 +15,7 @@ exports[`renders a snapshot of Models 1`] = `
           className="modelsitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure-Samples/AI-Gallery-InceptionV3"
             data-theme="medium"
           />
@@ -28,11 +24,7 @@ exports[`renders a snapshot of Models 1`] = `
           className="modelsitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="Azure-Samples/AI-Gallery-TinyYolo"
             data-theme="medium"
           />
@@ -41,11 +33,7 @@ exports[`renders a snapshot of Models 1`] = `
           className="modelsitem item"
         >
           <div
-            className={
-              Array [
-                "github-card",
-              ]
-            }
+            class="github-card"
             data-github="onnx/models"
             data-theme="medium"
           />

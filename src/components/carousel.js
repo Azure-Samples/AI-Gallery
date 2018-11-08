@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import $ from 'jquery';
-import Card from './card';
 
 const config = require('./../config');
 
@@ -152,8 +150,8 @@ export default class Carousel extends Component {
             <div>
                 <ul className={["menu", this.keyword].join(' ')} id={[this.keyword,"menu"].join('-')} ref={this.list}>
                     {data.map(obj => (
-                        <li className={[this.keyword+"item", "item"].join(' ')} key={obj.link}>
-                                <Card data={obj}/>
+                        <li className={[this.keyword+"item", "item"].join(' ')} key={obj.full_name}>
+                                <div class="github-card" data-github={obj.full_name} data-theme="medium"></div>
                         </li>
                     ))}
                 </ul>
