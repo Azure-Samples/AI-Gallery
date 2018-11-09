@@ -28,8 +28,6 @@ export default class Carousel extends Component {
         this.getMenuPosition = this.getMenuPosition.bind(this);
         this.scrollLeft = this.scrollLeft.bind(this);
         this.scrollRight = this.scrollRight.bind(this);
-
-
     }
 
     componentDidMount(){
@@ -150,9 +148,9 @@ export default class Carousel extends Component {
             return (
             <div>
                 <ul className={["menu", this.keyword].join(' ')} id={[this.keyword,"menu"].join('-')} ref={this.list}>
-                    {data.map(obj => (
-                        <li className={[this.keyword+"item", "item"].join(' ')} key={obj.link}>
-                                <Card data={obj}/>
+                    {data.map((obj, index) => (
+                        <li className={[this.keyword+"item", "item"].join(' ')} key={index}>
+                                <Card data={obj} key={obj.link}/>
                         </li>
                     ))}
                 </ul>

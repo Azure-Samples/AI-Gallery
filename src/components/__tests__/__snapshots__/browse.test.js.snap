@@ -9,6 +9,7 @@ exports[`renders a snapshot of browse 1`] = `
       <input
         class="button browsebtn noselect"
         id="OnnxSearch"
+        onClick={[Function]}
         type="button"
         value="Onnx"
       />
@@ -17,6 +18,7 @@ exports[`renders a snapshot of browse 1`] = `
       <input
         class="button  browsebtn noselect"
         id="TensorflowSearch"
+        onClick={[Function]}
         type="button"
         value="Tensorflow"
       />
@@ -36,11 +38,17 @@ exports[`renders a snapshot of browse 1`] = `
       }
     >
       <div
-        class="github-widget"
-        data-browseTopic="onnx"
-        data-type="browse"
-        id="browse_widget1"
-      />
+        className="gh-list"
+      >
+        <h3>
+          Current Topic: '
+          Onnx
+          '
+        </h3>
+        <ul
+          classname="gh-frame-container"
+        />
+      </div>
     </div>
   </div>
 </div>
