@@ -12,7 +12,6 @@ $(document).ready(function (){
     render(<Examples />, document.getElementById('examples-container'));
     render(<Models />, document.getElementById('models-container'));
     
-    var cardWidget = require('./card-widget');
 
     widget.init();
 });
