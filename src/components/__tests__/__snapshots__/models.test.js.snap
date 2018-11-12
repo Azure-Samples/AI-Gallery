@@ -38,7 +38,7 @@ exports[`renders a snapshot of Models 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-InceptionV3"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-InceptionV3"
                     target="_top"
                   >
                     AI-Gallery-InceptionV3
@@ -57,7 +57,7 @@ exports[`renders a snapshot of Models 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-InceptionV3/network"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-InceptionV3/network"
                     target="_top"
                   >
                     <strong>
@@ -68,7 +68,7 @@ exports[`renders a snapshot of Models 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-InceptionV3/stargazers"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-InceptionV3/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -108,7 +108,7 @@ exports[`renders a snapshot of Models 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-TinyYolo"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-TinyYolo"
                     target="_top"
                   >
                     AI-Gallery-TinyYolo
@@ -127,7 +127,7 @@ exports[`renders a snapshot of Models 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-TinyYolo/network"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-TinyYolo/network"
                     target="_top"
                   >
                     <strong>
@@ -138,7 +138,7 @@ exports[`renders a snapshot of Models 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure-Samples/AI-Gallery-TinyYolo/stargazers"
+                    href="https://www.github.com/Azure-Samples/AI-Gallery-TinyYolo/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -178,7 +178,7 @@ exports[`renders a snapshot of Models 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//onnx/models"
+                    href="https://www.github.com/onnx/models"
                     target="_top"
                   >
                     models
@@ -197,7 +197,7 @@ exports[`renders a snapshot of Models 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//onnx/models/network"
+                    href="https://www.github.com/onnx/models/network"
                     target="_top"
                   >
                     <strong>
@@ -208,7 +208,7 @@ exports[`renders a snapshot of Models 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//onnx/models/stargazers"
+                    href="https://www.github.com/onnx/models/stargazers"
                     target="_top"
                   >
                     <strong>
