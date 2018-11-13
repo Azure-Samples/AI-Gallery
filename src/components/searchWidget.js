@@ -30,7 +30,7 @@ export default class searchWidget extends Component {
     }
 
     cleanseKeyword(keyword){
-        return "topic:" + keyword.replace(/ /g, "+topic:");
+        return (keyword == '') ? "topic:gallery" : "topic:gallery+topic:" + keyword.replace(/ /g, "+topic:");
     }
 
     constructURL(keyword, users){

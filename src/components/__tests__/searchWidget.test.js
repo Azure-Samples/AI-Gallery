@@ -4,6 +4,7 @@ import SearchWidget from './../searchWidget';
 import GithubApiInterface from './../../githubApiInterface';
 import ReactDOMServer from 'react-dom/server';
 import Adapter from 'enzyme-adapter-react-16';
+import Search from '../search';
 
 var $ = require("jquery");
 jest.mock('./../../githubApiInterface');
@@ -11,7 +12,7 @@ configure({ adapter: new Adapter() });
 
 test('Make sure constructURL method constructs the right url', () =>{
     const wrapper = shallow(<SearchWidget keyword={"iot"}/>);
-    var expectedURL = "https://api.github.com/search/repositories?q=user:Azure+user:Azure-Samples+user:Microsoft+topic:iot&sort=stars&per_page=40";
+    var expectedURL = "https://api.github.com/search/repositories?q=user:Azure+user:Azure-Samples+user:Microsoft+topic:gallery+topic:iot&sort=stars&per_page=40";
     expect(wrapper.instance().constructURL("iot", ["Azure", "Azure-Samples", "Microsoft"])).toBe(expectedURL);
 });
 
@@ -101,9 +102,14 @@ test('make sure topRepos sorts as intended and only returns 5 repositories', () 
 
 test('check that cleanseKeyword correctly manipulates the keyword', () => {
     const wrapper = shallow(<SearchWidget keyword={'iot'}/>);
-    var testString = "hello world"
-    var expectedString = "topic:hello+topic:world"
+    var testString = "hello world";
+    var expectedString = "topic:gallery+topic:hello+topic:world";
     expect(wrapper.instance().cleanseKeyword(testString)).toBe(expectedString);
+
+    testString = '';
+    expectedString = "topic:gallery";
+    expect(wrapper.instance().cleanseKeyword(testString)).toBe(expectedString);
+
 })
 
 test('check that displayResults returns the correct list item format', () => {
@@ -114,7 +120,7 @@ test('check that displayResults returns the correct list item format', () => {
         repoUrl: "repo1",
         topics: "test"
     };
-    var expected = "<li class=\"gh-item\"><div class=\"gh-frame\"><ul class=\"repo-info-frame\"><li class=\"repo-img repo-attr\"><img width=\"30px\" height=\"30px\"/></li><li class=\"repo-name repo-attr\">name</li><li class=\"repo-lang repo-attr\">html</li><li class=\"repo-stars repo-attr\">☆1</li></ul><div class=\"repo-topic-container\"><div class=\"repo-topic repo-attr\">t</div><div class=\"repo-topic repo-attr\">e</div><div class=\"repo-topic repo-attr\">s</div><div class=\"repo-topic repo-attr\">t</div></div></div></li>"
+    var expected = "<li class=\"gh-item\"><div class=\"gh-frame\"><ul class=\"repo-info-frame\"><li class=\"repo-img repo-attr\"><img width=\"30px\" height=\"30px\"/></li><li class=\"repo-name repo-attr\"><a href=\"repo1\" target=\"_blank\" class=\"standardLink\">name</a></li><li class=\"repo-lang repo-attr\">html</li><li class=\"repo-stars repo-attr\">☆1</li></ul><div class=\"repo-topic-container\"><div class=\"repo-topic repo-attr\">t</div><div class=\"repo-topic repo-attr\">e</div><div class=\"repo-topic repo-attr\">s</div><div class=\"repo-topic repo-attr\">t</div></div></div></li>"
     const wrapper = shallow(<SearchWidget  keyword={'iot'}/>);
     expect(ReactDOMServer.renderToStaticMarkup(wrapper.instance().displayResults(repo1))).toMatch(expected);
 })
