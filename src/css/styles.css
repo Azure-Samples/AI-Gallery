@@ -65,22 +65,6 @@ html {
     padding:2px;
 }
 
-.github-widget{
-    width:100%;
-    max-width: 100% !important;
-}
-
-.gh-widget-container{
-    align-items: left !important;
-    justify-content: left !important;
-    padding: 10;
-}
-
-.gh-widget-topic{
-    align-items: left;
-}
-
-
 .noselect{
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

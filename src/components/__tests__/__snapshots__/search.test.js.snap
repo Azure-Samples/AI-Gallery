@@ -6,8 +6,9 @@ exports[`renders a snapshot of Search 1`] = `
     class="content-container"
   >
     <input
-      class="button btnSearch  searchbtn noselect"
+      className="button btnSearch searchbtn noselect"
       id="btnSearch"
+      onClick={[Function]}
       type="button"
       value="Search"
     />
@@ -18,14 +19,24 @@ exports[`renders a snapshot of Search 1`] = `
         class="searchbar"
         id="keyword"
         name="keyword"
+        onChange={[Function]}
         type="text"
+        value=""
         width="100%"
       />
     </div>
   </div>
   <div
-    class="github-widget"
-    data-type="search"
-  />
+    className="gh-list"
+  >
+    <h3>
+      Current Topic: '
+      
+      '
+    </h3>
+    <ul
+      classname="gh-frame-container"
+    />
+  </div>
 </div>
 `;

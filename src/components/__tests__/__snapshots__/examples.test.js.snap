@@ -38,7 +38,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-PredictiveMaintenance"
+                    href="https://www.github.com/Azure/MachineLearningSamples-PredictiveMaintenance"
                     target="_top"
                   >
                     MachineLearningSamples-PredictiveMaintenance
@@ -57,7 +57,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-PredictiveMaintenance/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-PredictiveMaintenance/network"
                     target="_top"
                   >
                     <strong>
@@ -68,7 +68,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-PredictiveMaintenance/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-PredictiveMaintenance/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -108,7 +108,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-SentimentAnalysis"
+                    href="https://www.github.com/Azure/MachineLearningSamples-SentimentAnalysis"
                     target="_top"
                   >
                     MachineLearningSamples-SentimentAnalysis
@@ -127,7 +127,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-SentimentAnalysis/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-SentimentAnalysis/network"
                     target="_top"
                   >
                     <strong>
@@ -138,7 +138,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-SentimentAnalysis/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-SentimentAnalysis/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -178,7 +178,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-ChurnPrediction"
+                    href="https://www.github.com/Azure/MachineLearningSamples-ChurnPrediction"
                     target="_top"
                   >
                     MachineLearningSamples-ChurnPrediction
@@ -197,7 +197,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-ChurnPrediction/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-ChurnPrediction/network"
                     target="_top"
                   >
                     <strong>
@@ -208,7 +208,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-ChurnPrediction/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-ChurnPrediction/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -248,7 +248,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-BiomedicalEntityExtraction"
+                    href="https://www.github.com/Azure/MachineLearningSamples-BiomedicalEntityExtraction"
                     target="_top"
                   >
                     MachineLearningSamples-BiomedicalEntityExtraction
@@ -267,7 +267,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-BiomedicalEntityExtraction/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-BiomedicalEntityExtraction/network"
                     target="_top"
                   >
                     <strong>
@@ -278,7 +278,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-BiomedicalEntityExtraction/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-BiomedicalEntityExtraction/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -318,7 +318,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-QnAMatching"
+                    href="https://www.github.com/Azure/MachineLearningSamples-QnAMatching"
                     target="_top"
                   >
                     MachineLearningSamples-QnAMatching
@@ -337,7 +337,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-QnAMatching/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-QnAMatching/network"
                     target="_top"
                   >
                     <strong>
@@ -348,7 +348,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-QnAMatching/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-QnAMatching/stargazers"
                     target="_top"
                   >
                     <strong>
@@ -388,7 +388,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 <h1>
                   <a
                     className="wordwrap"
-                    href="https://www.github.com//Azure/MachineLearningSamples-AerialImageClassification"
+                    href="https://www.github.com/Azure/MachineLearningSamples-AerialImageClassification"
                     target="_top"
                   >
                     MachineLearningSamples-AerialImageClassification
@@ -407,7 +407,7 @@ exports[`renders a snapshot of Examples 1`] = `
               >
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-AerialImageClassification/network"
+                    href="https://www.github.com/Azure/MachineLearningSamples-AerialImageClassification/network"
                     target="_top"
                   >
                     <strong>
@@ -418,7 +418,7 @@ exports[`renders a snapshot of Examples 1`] = `
                 </li>
                 <li>
                   <a
-                    href="https://www.github.com//Azure/MachineLearningSamples-AerialImageClassification/stargazers"
+                    href="https://www.github.com/Azure/MachineLearningSamples-AerialImageClassification/stargazers"
                     target="_top"
                   >
                     <strong>

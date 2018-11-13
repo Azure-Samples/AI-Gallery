@@ -1,4 +1,3 @@
-var widget = require('./widget');
 import { render } from 'react-dom';
 import React from 'react';
 import Browse from './components/browse';
@@ -11,7 +10,4 @@ $(document).ready(function (){
     render(<Search />, document.getElementById('search'));
     render(<Examples />, document.getElementById('examples-container'));
     render(<Models />, document.getElementById('models-container'));
-    
-
-    widget.init();
 });
