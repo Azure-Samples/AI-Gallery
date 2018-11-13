@@ -6,12 +6,12 @@ import Carousel from './../carousel';
 
 configure({ adapter: new Adapter() });
 
-test('renders a snapshot of SliderContent (models)', () => {
+test('renders a snapshot of Carousel (models)', () => {
     const tree = renderer.create(<Carousel keyword={"models"}/>).toJSON();
     expect(tree).toMatchSnapshot();
 })
 
-test('renders a snapshot of SliderContent (examples)', () => {
+test('renders a snapshot of Carousel (examples)', () => {
     const tree = renderer.create(<Carousel keyword={"examples"}/>).toJSON();
     expect(tree).toMatchSnapshot();
 })

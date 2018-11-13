@@ -86,3 +86,8 @@
     padding: 15px 0px;
     margin: 15px 0px;
 }
+
+.standardLink{
+    text-decoration: none;
+    color:#0179D8;
+}

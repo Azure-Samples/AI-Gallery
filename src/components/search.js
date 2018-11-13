@@ -12,7 +12,7 @@ export default class Search extends Component {
         };
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.setState({
             inputValue: ''
         })

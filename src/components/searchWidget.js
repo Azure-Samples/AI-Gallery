@@ -40,7 +40,6 @@ export default class searchWidget extends Component {
             url = url + "user:" + users[i] + "+";
         }
         url = url + this.cleanseKeyword(keyword) + "&sort=stars&per_page=40";
-        console.log(url)
         return url;
     }
     
@@ -83,10 +82,6 @@ export default class searchWidget extends Component {
         this.setState({refreshList: !this.state.refreshList});
     }
 
-    loadRepo(url){
-        window.open(url, "_blank");
-    }
-
     displayResults(r, i){
         var topics = [];
         for (var i=0; i < r.topics.length && i < 6; i++){
@@ -96,7 +91,7 @@ export default class searchWidget extends Component {
                             <div className={"gh-frame"}> 
                                 <ul className={"repo-info-frame"}>
                                     <li className={"repo-img repo-attr"}><img src={r.image} alt={r.username} width={"30px"} height={"30px"}/></li>
-                                    <li className={"repo-name repo-attr"}>{r.name}</li> 
+                                    <li className={"repo-name repo-attr"}><a href={r.repoUrl} target={"_blank"} className={"standardLink"}>{r.name}</a></li> 
                                     <li className={"repo-lang repo-attr"}>{r.language}</li> 
                                     <li className={"repo-stars repo-attr"}>&#9734;{r.stars}</li> 
                                 </ul>

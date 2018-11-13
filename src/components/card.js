@@ -5,31 +5,36 @@ export default class Card extends Component {
     constructor(props){
         super(props);
         this.data = this.props.data;
-        this.content = "";
-        this.link = "";
-        this.userlink = "";
-        this.imageLink = "";
-        this.username = "";
-        this.repoName = "";
-        this.numForks = "";
-        this.numStars = "";
-        this.repoLink = "";
+        this.state={
+            content: "",
+            link: "",
+            userlink: "",
+            imageLink: "",
+            userName: "",
+            repoName: "",
+            numForks: "",
+            numStars: "",
+            repoLink: ""
+        };
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.parseData(this.data);
     }
 
     parseData(response){
-        this.imageLink = response.owner.avatar_url;
-        this.userlink = response.owner.html_url;
-        this.userName = response.owner.login;
-        this.repoName = response.name;
-        this.numForks = response.forks_count;
-        this.numStars = response.stargazers_count;
-        this.repoLink = response.html_url;
-        this.content = response.description;
-        this.link = ["https://www.github.com/", this.userName,this.repoName].join('/');
+        this.setState({
+            imageLink: response.owner.avatar_url,
+            imageLink: response.owner.avatar_url,
+            userlink: response.owner.html_url,
+            userName: response.owner.login,
+            repoName: response.name,
+            numForks: response.forks_count,
+            numStars: response.stargazers_count,
+            repoLink: response.html_url,
+            content: response.description,
+            link:["https://www.github.com", response.owner.login, response.name,].join('/')
+        })
     }
 
     render(){
@@ -37,24 +42,24 @@ export default class Card extends Component {
             <div>
                 <div className={["github-card","repo-card"].join(' ')}>
                     <div className={["header"]}>
-                        <a className={"avatar"} href={this.userlink} target={"_top"}>
-                            <img src={this.imageLink} alt={this.userName}/>
+                        <a className={"avatar"} href={this.state.userlink} target={"_top"}>
+                            <img src={this.state.imageLink} alt={this.state.userName}/>
                         </a>
-                        <h1><a className={"wordwrap"} href={this.link} target={"_top"}>{this.repoName}</a></h1>
+                        <h1><a className={"wordwrap"} href={this.state.link} target={"_top"}>{this.state.repoName}</a></h1>
                     </div>
                         <div className={"content"}>
-                        <p>{this.content}</p>
+                        <p>{this.state.content}</p>
                     </div>
                     <ul className={"status"}>
                         <li>
-                            <a href={[this.link, "/network"].join('')} target="_top">
-                                <strong>{this.numForks}</strong>
+                            <a href={[this.state.link, "/network"].join('')} target="_top">
+                                <strong>{this.state.numForks}</strong>
                                 Forks
                             </a>
                         </li>
                         <li>
-                            <a href={[this.link, "/stargazers"].join('')} target="_top">
-                                <strong>{this.numStars}</strong>
+                            <a href={[this.state.link, "/stargazers"].join('')} target="_top">
+                                <strong>{this.state.numStars}</strong>
                                 Stars
                             </a>
                         </li>

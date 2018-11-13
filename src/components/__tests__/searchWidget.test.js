@@ -120,7 +120,7 @@ test('check that displayResults returns the correct list item format', () => {
         repoUrl: "repo1",
         topics: "test"
     };
-    var expected = "<li class=\"gh-item\"><div class=\"gh-frame\"><ul class=\"repo-info-frame\"><li class=\"repo-img repo-attr\"><img width=\"30px\" height=\"30px\"/></li><li class=\"repo-name repo-attr\">name</li><li class=\"repo-lang repo-attr\">html</li><li class=\"repo-stars repo-attr\">☆1</li></ul><div class=\"repo-topic-container\"><div class=\"repo-topic repo-attr\">t</div><div class=\"repo-topic repo-attr\">e</div><div class=\"repo-topic repo-attr\">s</div><div class=\"repo-topic repo-attr\">t</div></div></div></li>"
+    var expected = "<li class=\"gh-item\"><div class=\"gh-frame\"><ul class=\"repo-info-frame\"><li class=\"repo-img repo-attr\"><img width=\"30px\" height=\"30px\"/></li><li class=\"repo-name repo-attr\"><a href=\"repo1\" target=\"_blank\" class=\"standardLink\">name</a></li><li class=\"repo-lang repo-attr\">html</li><li class=\"repo-stars repo-attr\">☆1</li></ul><div class=\"repo-topic-container\"><div class=\"repo-topic repo-attr\">t</div><div class=\"repo-topic repo-attr\">e</div><div class=\"repo-topic repo-attr\">s</div><div class=\"repo-topic repo-attr\">t</div></div></div></li>"
     const wrapper = shallow(<SearchWidget  keyword={'iot'}/>);
     expect(ReactDOMServer.renderToStaticMarkup(wrapper.instance().displayResults(repo1))).toMatch(expected);
 })
