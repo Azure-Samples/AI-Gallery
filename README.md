@@ -1,21 +1,37 @@
-# Introduction 
-This repository contains implementation of Azure AI Gallery. The one-page spec about AI Gallery is at: https://microsoft.sharepoint.com/:w:/r/teams/Vienna/_layouts/15/Doc.aspx?sourcedoc=%7BB5F2C25C-C5B8-48AE-92D8-77366519DD32%7D&file=Gallery%20One-Pager.docx&action=default&mobileredirect=true
+# Live page link
 
-# Getting Started
+Site is visible [here](https://azure-samples.github.io/AI-Gallery/)
 
-**Directory Structure**
+## GitHub Pages AI Gallery Example
 
-/src source codes 
-    /src/product product codes
-    /src/test test codes
+You can use the [editor on GitHub](https://github.com/Azure-Samples/AI-Gallery/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+### Markdown
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
