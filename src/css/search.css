@@ -1,0 +1,93 @@
+.gh-frame-container{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    list-style-type:none;
+    margin:0;
+    padding:10;
+    overflow:hidden;
+    border:solid 1px #333;
+}
+
+.gh-item{
+    list-style: none;
+}
+
+.gh-frame{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    color:#333;
+    background-color: #f2f2f2;
+    margin: 10 0;
+}
+
+.repo-info-frame{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    list-style-type:none;
+    margin:0;
+    padding:10;
+    overflow:hidden;
+    color:#333;
+}
+
+.repo-attr{
+    padding:10px;
+    font-size: 16px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.repo-img{
+    text-align:left;
+}
+
+.repo-name{
+    flex:2;
+    text-align: left;
+}
+
+.repo-lang{
+    flex:1;
+    text-align: left;
+}
+
+.repo-topic-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.repo-topic{
+    font-size:12px;
+    background-color:#fff;
+    color:#333;
+    margin:5;
+    padding:5;
+    flex:1;
+    text-align: left;
+}
+
+.gh-frame-container li a *{
+    text-decoration: none;
+}
+
+.gh-list{
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #333;
+    border-image: initial;
+    padding: 15px 0px;
+    margin: 15px 0px;
+}
+
+.standardLink{
+    text-decoration: none;
+    color:#0179D8;
+}

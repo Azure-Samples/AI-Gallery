@@ -5,6 +5,8 @@ classes: landing
 
 <link rel="stylesheet" type="text/css" href="./src/css/content-scroller.css"/>
 <link rel="stylesheet" type="text/css" href="./src/css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="./src/css/search.css"/>
+<link rel="stylesheet" type="text/css" href="./src/css/medium.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./dist/bundle.js"></script>
 
